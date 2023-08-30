@@ -11,7 +11,6 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="LoginVC" storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -35,11 +34,15 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eF-xH-8gZ">
                                 <rect key="frame" x="16" y="459" width="361" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="L8s-5X-YB6"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="btnLoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udA-ql-qu8"/>
                                 </connections>
@@ -65,6 +68,7 @@
                         <outlet property="txtUserName" destination="8aO-ky-f3F" id="Htq-MT-gdq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1026.7175572519084" y="3.5211267605633805"/>
         </scene>
@@ -85,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="100" y="3.5211267605633805"/>
         </scene>
-        <!--Profile-->
+        <!--Tag Writer-->
         <scene sceneID="cZp-NC-fEx">
             <objects>
-                <viewController restorationIdentifier="ProfileVC" storyboardIdentifier="ProfileVC" id="CYz-Jg-skg" customClass="ProfileVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="NFCTagWriter" storyboardIdentifier="NFCTagWriter" id="CYz-Jg-skg" customClass="NFCTagWriter" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHg-xc-Vyc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +112,7 @@
                                             <action selector="btnSignOutAction:" destination="CYz-Jg-skg" eventType="touchUpInside" id="aeO-9Q-izY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-zV-Afm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Tag Writer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-zV-Afm">
                                         <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="bt8-Bb-jEY"/>
@@ -137,16 +141,16 @@
                             <constraint firstItem="JKt-Yb-Lcw" firstAttribute="leading" secondItem="tHg-xc-Vyc" secondAttribute="leading" id="Txq-9C-fnF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="3zd-Yb-SMB"/>
+                    <tabBarItem key="tabBarItem" title="Tag Writer" image="person.crop.circle.fill" catalog="system" id="3zd-Yb-SMB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izr-Ys-LEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2662" y="382"/>
         </scene>
-        <!--Home-->
+        <!--Tag Reader-->
         <scene sceneID="UEJ-LN-0u9">
             <objects>
-                <viewController restorationIdentifier="HomeVC" storyboardIdentifier="HomeVC" id="4Ou-AH-eDG" customClass="HomeVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="NFCTagReaderVC" storyboardIdentifier="NFCTagReaderVC" id="4Ou-AH-eDG" customClass="NFCTagReaderVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sJR-2e-P4e">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +170,7 @@
                                             <action selector="btnSignOutAction:" destination="4Ou-AH-eDG" eventType="touchUpInside" id="SkI-qO-cCR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-WT-mrf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Tag Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-WT-mrf">
                                         <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="BNi-nQ-BBQ"/>
@@ -186,20 +190,51 @@
                                     <constraint firstAttribute="height" constant="44" id="tHX-pG-ZA3"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEX-ph-N4U" userLabel="btnScan">
+                                <rect key="frame" x="16" y="718" width="361" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="QU7-W9-8JK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Read NFC Tag"/>
+                                <connections>
+                                    <action selector="btnScanAction:" destination="4Ou-AH-eDG" eventType="touchUpInside" id="joT-nZ-Z7c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMZ-Rs-Bh4" userLabel="lblTagMsg">
+                                <rect key="frame" x="16" y="402" width="361" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="OAG-eF-WZq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YGa-gF-nG9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YGa-gF-nG9" firstAttribute="trailing" secondItem="ds8-S5-mW9" secondAttribute="trailing" id="NWA-Du-4JQ"/>
+                            <constraint firstItem="TEX-ph-N4U" firstAttribute="leading" secondItem="YGa-gF-nG9" secondAttribute="leading" constant="16" id="OOq-oG-sdM"/>
+                            <constraint firstItem="qMZ-Rs-Bh4" firstAttribute="centerY" secondItem="sJR-2e-P4e" secondAttribute="centerY" id="TGg-UN-Edu"/>
+                            <constraint firstItem="YGa-gF-nG9" firstAttribute="bottom" secondItem="TEX-ph-N4U" secondAttribute="bottom" constant="16" id="YbV-mi-XKM"/>
+                            <constraint firstItem="YGa-gF-nG9" firstAttribute="trailing" secondItem="qMZ-Rs-Bh4" secondAttribute="trailing" constant="16" id="bQr-Q6-54B"/>
                             <constraint firstItem="ds8-S5-mW9" firstAttribute="top" secondItem="YGa-gF-nG9" secondAttribute="top" id="hH9-ZL-ap6"/>
+                            <constraint firstItem="qMZ-Rs-Bh4" firstAttribute="leading" secondItem="YGa-gF-nG9" secondAttribute="leading" constant="16" id="k7H-vs-WgW"/>
                             <constraint firstItem="ds8-S5-mW9" firstAttribute="leading" secondItem="YGa-gF-nG9" secondAttribute="leading" id="mdz-fe-z4I"/>
+                            <constraint firstItem="YGa-gF-nG9" firstAttribute="trailing" secondItem="TEX-ph-N4U" secondAttribute="trailing" constant="16" id="yjg-ix-duY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="LYh-LP-gtv"/>
+                    <tabBarItem key="tabBarItem" title="Tag Reader" image="house" catalog="system" id="LYh-LP-gtv"/>
+                    <connections>
+                        <outlet property="lblTagMsg" destination="qMZ-Rs-Bh4" id="rpN-2v-6aR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pci-Zg-LuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="-293"/>
+            <point key="canvasLocation" x="2641.9847328244273" y="-293.66197183098592"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="R5f-KO-CE9">
@@ -221,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="1737" y="12"/>
         </scene>
-        <!--Info-->
+        <!--Tag List-->
         <scene sceneID="ISn-VY-d1C">
             <objects>
-                <viewController restorationIdentifier="MyInfoVC" storyboardIdentifier="MyInfoVC" id="A6U-Mo-q6q" customClass="MyInfoVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="NFCTagListVC" storyboardIdentifier="NFCTagListVC" id="A6U-Mo-q6q" customClass="NFCTagListVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3aN-9f-jNV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +279,7 @@
                                             <action selector="btnBackAction:" destination="A6U-Mo-q6q" eventType="touchUpInside" id="ucR-My-oz8"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CS-r2-lR7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Tag List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CS-r2-lR7">
                                         <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="tVb-hb-Vre"/>
@@ -273,7 +308,7 @@
                             <constraint firstItem="md4-TD-WP3" firstAttribute="leading" secondItem="3aN-9f-jNV" secondAttribute="leading" id="nfD-ki-syr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" id="UWg-5r-Qx2"/>
+                    <tabBarItem key="tabBarItem" title="Tag List" image="info" catalog="system" id="UWg-5r-Qx2"/>
                     <navigationItem key="navigationItem" id="9fu-Wv-F9F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFr-YN-noX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -288,6 +323,9 @@
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

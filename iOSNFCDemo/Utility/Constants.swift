@@ -8,7 +8,7 @@
 import Foundation
 
 enum VCNames: String {
-    case LoginVC, MyInfoVC, TabBarController, HomeVC, ProfileVC
+    case LoginVC, NFCTagListVC, TabBarController, NFCTagReaderVC, NFCTagWriter
 }
 
 enum StoryboardNames: String {

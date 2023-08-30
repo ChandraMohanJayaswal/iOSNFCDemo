@@ -12,18 +12,18 @@ class BaseVC: UIViewController {
         super.viewDidLoad()
     }
     
-    func moveToMyInfoScreen(user: User) {
+    func moveTagListVC(user: User) {
         let viewControllers = self.navigationController?.viewControllers
         if let viewControllers = viewControllers {
             for aVC in viewControllers {
-                if aVC is MyInfoVC {
+                if aVC is NFCTagListVC {
                     self.navigationController?.popToViewController(aVC, animated: false)
                     return
                 }
             }
         }
         
-        let vc = NavigationHandler.initiateViewControllerWith(identifier: .MyInfoVC, storyboardName: .Main) as! MyInfoVC
+        let vc = NavigationHandler.initiateViewControllerWith(identifier: .NFCTagListVC, storyboardName: .Main) as! NFCTagListVC
         vc.user = user
         self.navigationController?.pushViewController(vc, animated: true)
     }

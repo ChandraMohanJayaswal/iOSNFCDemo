@@ -1,5 +1,5 @@
 //
-//  ProfileVC.swift
+//  NFCTagWriter.swift
 //  iOSNFCDemo
 //
 //  Created by Chandra Jayaswal on 29/08/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileVC: BaseVC {
+class NFCTagWriter: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
