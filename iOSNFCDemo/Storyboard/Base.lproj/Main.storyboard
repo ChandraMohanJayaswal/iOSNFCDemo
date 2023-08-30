@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="100" y="3.5211267605633805"/>
         </scene>
-        <!--Tag Writer-->
+        <!--NFC Writer-->
         <scene sceneID="cZp-NC-fEx">
             <objects>
                 <viewController restorationIdentifier="NFCTagWriter" storyboardIdentifier="NFCTagWriter" id="CYz-Jg-skg" customClass="NFCTagWriter" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                                             <action selector="btnSignOutAction:" destination="CYz-Jg-skg" eventType="touchUpInside" id="aeO-9Q-izY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Tag Writer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-zV-Afm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Writer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-zV-Afm">
                                         <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="bt8-Bb-jEY"/>
@@ -132,22 +132,52 @@
                                     <constraint firstAttribute="bottom" secondItem="BC3-zV-Afm" secondAttribute="bottom" id="tsK-Nc-MuY"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message for NFC Tag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5r1-9n-kjb" userLabel="txtTagMessage">
+                                <rect key="frame" x="16" y="409" width="361" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="CBg-pP-PmY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRM-aO-wrE" userLabel="btnWrite">
+                                <rect key="frame" x="16" y="459" width="361" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="KZT-55-CDH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Write to NFC Tag"/>
+                                <connections>
+                                    <action selector="btnWriteAction:" destination="CYz-Jg-skg" eventType="touchUpInside" id="kF9-c2-jBF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wRF-jc-kjG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5r1-9n-kjb" firstAttribute="leading" secondItem="wRF-jc-kjG" secondAttribute="leading" constant="16" id="2FF-p9-4TW"/>
+                            <constraint firstItem="wRF-jc-kjG" firstAttribute="trailing" secondItem="5r1-9n-kjb" secondAttribute="trailing" constant="16" id="6GN-2o-TWS"/>
+                            <constraint firstItem="5r1-9n-kjb" firstAttribute="centerY" secondItem="tHg-xc-Vyc" secondAttribute="centerY" id="Fk7-MP-xGM"/>
+                            <constraint firstItem="wRF-jc-kjG" firstAttribute="trailing" secondItem="cRM-aO-wrE" secondAttribute="trailing" constant="16" id="Fmt-wy-m5g"/>
                             <constraint firstItem="JKt-Yb-Lcw" firstAttribute="top" secondItem="wRF-jc-kjG" secondAttribute="top" id="Kpk-H3-YZh"/>
+                            <constraint firstItem="cRM-aO-wrE" firstAttribute="leading" secondItem="tHg-xc-Vyc" secondAttribute="leading" constant="16" id="Lly-2a-huR"/>
                             <constraint firstItem="wRF-jc-kjG" firstAttribute="trailing" secondItem="JKt-Yb-Lcw" secondAttribute="trailing" id="PrZ-sJ-Hip"/>
+                            <constraint firstItem="cRM-aO-wrE" firstAttribute="top" secondItem="5r1-9n-kjb" secondAttribute="bottom" constant="16" id="TEj-Gu-3no"/>
                             <constraint firstItem="JKt-Yb-Lcw" firstAttribute="leading" secondItem="tHg-xc-Vyc" secondAttribute="leading" id="Txq-9C-fnF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tag Writer" image="person.crop.circle.fill" catalog="system" id="3zd-Yb-SMB"/>
+                    <tabBarItem key="tabBarItem" title="NFC Writer" image="person.crop.circle.fill" catalog="system" id="3zd-Yb-SMB"/>
+                    <connections>
+                        <outlet property="txtNFCTagMessage" destination="5r1-9n-kjb" id="vPP-XJ-SG6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izr-Ys-LEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2662" y="382"/>
         </scene>
-        <!--Tag Reader-->
+        <!--NFC Reader-->
         <scene sceneID="UEJ-LN-0u9">
             <objects>
                 <viewController restorationIdentifier="NFCTagReaderVC" storyboardIdentifier="NFCTagReaderVC" id="4Ou-AH-eDG" customClass="NFCTagReaderVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,7 +200,7 @@
                                             <action selector="btnSignOutAction:" destination="4Ou-AH-eDG" eventType="touchUpInside" id="SkI-qO-cCR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Tag Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-WT-mrf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-WT-mrf">
                                         <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="BNi-nQ-BBQ"/>
@@ -227,7 +257,7 @@
                             <constraint firstItem="YGa-gF-nG9" firstAttribute="trailing" secondItem="TEX-ph-N4U" secondAttribute="trailing" constant="16" id="yjg-ix-duY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tag Reader" image="house" catalog="system" id="LYh-LP-gtv"/>
+                    <tabBarItem key="tabBarItem" title="NFC Reader" image="house" catalog="system" id="LYh-LP-gtv"/>
                     <connections>
                         <outlet property="lblTagMsg" destination="qMZ-Rs-Bh4" id="rpN-2v-6aR"/>
                     </connections>
@@ -256,7 +286,7 @@
             </objects>
             <point key="canvasLocation" x="1737" y="12"/>
         </scene>
-        <!--Tag List-->
+        <!--NFC List-->
         <scene sceneID="ISn-VY-d1C">
             <objects>
                 <viewController restorationIdentifier="NFCTagListVC" storyboardIdentifier="NFCTagListVC" id="A6U-Mo-q6q" customClass="NFCTagListVC" customModule="iOSNFCDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -279,7 +309,7 @@
                                             <action selector="btnBackAction:" destination="A6U-Mo-q6q" eventType="touchUpInside" id="ucR-My-oz8"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC Tag List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CS-r2-lR7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CS-r2-lR7">
                                         <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="tVb-hb-Vre"/>
@@ -308,7 +338,7 @@
                             <constraint firstItem="md4-TD-WP3" firstAttribute="leading" secondItem="3aN-9f-jNV" secondAttribute="leading" id="nfD-ki-syr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tag List" image="info" catalog="system" id="UWg-5r-Qx2"/>
+                    <tabBarItem key="tabBarItem" title="NFC List" image="info" catalog="system" id="UWg-5r-Qx2"/>
                     <navigationItem key="navigationItem" id="9fu-Wv-F9F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFr-YN-noX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
