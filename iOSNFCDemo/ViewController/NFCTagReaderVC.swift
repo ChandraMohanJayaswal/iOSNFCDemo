@@ -40,6 +40,10 @@ extension NFCTagReaderVC: NFCNDEFReaderSessionDelegate {
         }
     }
     
+    func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
+        print("readerSessionDidBecomeActive: \(session.description)")
+    }
+    
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         var result = ""
         for payload in messages[0].records {

@@ -133,11 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				97D2E5C52A9E3C6D00A4F2CD /* LoginVC.swift */,
+				9728AF2D2A9E3EB20075767A /* NFCTagReaderVC.swift */,
+				9728AF2F2A9E3ECD0075767A /* NFCTagWriter.swift */,
 				9728AF2B2A9E3E8A0075767A /* NFCTagListVC.swift */,
 				9728AF272A9E3DF70075767A /* BaseVC.swift */,
 				9728AF292A9E3E2B0075767A /* TabBarController.swift */,
-				9728AF2D2A9E3EB20075767A /* NFCTagReaderVC.swift */,
-				9728AF2F2A9E3ECD0075767A /* NFCTagWriter.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
